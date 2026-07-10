@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# For MacOS - ping host and pop-up message when it responds
+[[ ! "$OSTYPE" == "darwin"* ]] && echo "Only works on Mac" && exit
+trap "exit" INT
+[[ -z "$1" ]] && echo "use pingeroo <IP>" && exit
+echo "waiting for $1 to respond to ping (ctrl-c to quit)"
+while true; do 
+    ping -c1 -W2 "$1" &>/dev/null
+    if [[ "$?" -eq 0 ]]; then
+        osascript -e "beep 2" -e "display dialog \"Host ${1} is UP!!\" with title \"Alert\" buttons {\"OK\"} default button \"OK\""  && break
+    fi
+done
