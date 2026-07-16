@@ -12,6 +12,6 @@ pingeroo mothernode-r05-whiskey &
 
 ### Install (copy paste the following command)
 ```
-mkdir -p ~/.local/bin && curl -s https://raw.githubusercontent.com/spectermax-glitch/pingeroo/refs/heads/main/pingeroo -o ~/.local/bin/pingeroo && chmod +x ~/.local/bin/pingeroo
+bash install.sh
 ```
 
