@@ -19,4 +19,3 @@ cd ..
 source ~/.zshrc
 rm -rf pingeroo
 ```
-
