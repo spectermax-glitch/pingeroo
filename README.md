@@ -10,8 +10,12 @@ or to run in background and keep terminal functional
 pingeroo mothernode-r05-whiskey &
 ```
 
-### Install (copy paste the following command)
+### Install
 ```
+git clone git@github.com:spectermax-glitch/pingeroo.git
+cd pingeroo
 bash install.sh
+cd ..
+source ~/.zshrc
+rm -rf pingeroo
 ```
-
